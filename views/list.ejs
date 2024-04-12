@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TODOLIST</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add your CSS file here -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+    <div class = "box" id="heading">
+        <h1>My Daily Schedule</h1>
+    </div>
+    <div class="box" >
+        <% for(var i = 0; i < newListItems.length; i++) { %>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                <p> <%= newListItems[i] %></p>
+            </div>
+            <% }  %>
+            <form class="item" action="/" method="post">
+                <input type="text" placeholder="Enter your task" name="newItems" autocomplete="off">
+                <button type="submit" name="list" value=<%= listTitle %>>
+                    +
+                </button>
+            </form>
+    </div>            
+       
+    
+    <footer>
+        Copyright 2024 Barnabas Oyewole
+    </footer>
+    <!-- Add your JavaScript file here -->
+    <script src="app.js" async defer></script>
+</body>
+</html>
